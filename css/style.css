@@ -37,6 +37,7 @@ body {
     transform: rotateX(67.5deg);
   }
 }
+
 @keyframes rotate-stalk {
   0%,
   100% {
@@ -46,6 +47,7 @@ body {
     transform: rotateX(-22.5deg);
   }
 }
+
 @keyframes rotate-face {
   0%,
   100% {
@@ -55,6 +57,7 @@ body {
     transform: rotateX(67.5deg) translateZ(0.5em);
   }
 }
+
 .layer {
   position: absolute;
   width: 100%;
@@ -68,7 +71,7 @@ body {
   background: radial-gradient(circle at 1em 1em, #0f1113, #3f4143);
   transition: box-shadow 0.1875s ease-in-out;
   box-shadow: 0 0 0.5em 0 rgba(15, 17, 19, 0.5),
-    inset 0 0 1em 0 rgba(15, 17, 19, 0.75);
+    inset 0 0 1em rgba(15, 17, 19, 0.75);
   animation: rotate 2s ease-in-out infinite;
 }
 
@@ -111,20 +114,24 @@ body {
 .wrap {
   cursor: pointer;
 }
+
 #toggle:checked ~ .wrap .layer .base,
 #toggle:checked ~ .wrap .layer .stalk,
 #toggle:checked ~ .wrap .layer .face {
   margin: 0 0 0 2em;
 }
+
 #toggle:checked ~ .wrap .layer .bottom {
   background: #fefeff;
   box-shadow: inset 0 0 0.0625em 0 dodgerblue, inset 0 0 0.5em 0 dodgerblue,
     0 0 1em 0 dodgerblue;
 }
+
 #toggle:checked ~ .wrap .layer .base,
 #toggle:checked ~ .wrap .layer .stalk {
   background: linear-gradient(90deg, #8fc8ff, #176cbf);
 }
+
 #toggle:checked ~ .wrap .layer .face {
   background: linear-gradient(90deg, #8fc8ff, #56acff);
 }
